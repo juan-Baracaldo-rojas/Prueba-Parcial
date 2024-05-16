@@ -1,11 +1,21 @@
 package com.uptc.frw.models;
 
-public class Proveedor {
+import jakarta.persistence.*;
 
-   private long nit;
+@Entity
+@Table(name = "proveedor")
+public class Proveedor {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "nit")
+    private long nit;
+    @Column(name = "nombre")
    private String nombre;
+    @Column(name = "tel")
    private String tel;
+    @Column(name = "direccion")
    private String direccion;
+    @Column(name = "tipo")
    private String tipo;
 
     public Proveedor() {

@@ -1,9 +1,19 @@
 package com.uptc.frw.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="descuento")
 public class Descuento {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="cod")
     private long cod;
+    @Column(name="nombre")
     private String nombre;
+    @Column(name="tipo")
     private String tipo;
+    @Column(name="valor")
     private double valor;
 
     public Descuento() {

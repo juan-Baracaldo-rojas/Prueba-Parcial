@@ -1,17 +1,32 @@
 package com.uptc.frw.models;
 
-import java.util.Date;
+import jakarta.persistence.*;
 
+import java.util.Date;
+@Entity
+@Table(name = "producto")
 public class Producto {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_producto")
     private long idProducto;
+    @Column(name="id_provedor")
     private long id_provedor;
+    @Column(name="cod_descuento")
     private long cod_descuento;
+    @Column(name="nombre")
     private String nombre;
+    @Column(name="valor_compra")
     private double valor_compra;
+    @Column(name="valor_venta")
     private double valor_venta;
+    @Column(name="fecha_entrega")
     private Date fecha_entrega;
+    @Column(name="fecha_salida")
     private Date fecha_salida;
+    @Column(name="cantidad")
     private int cantidad;
+    @Column(name="tipo")
     private String tipo;
 
     public Producto() {

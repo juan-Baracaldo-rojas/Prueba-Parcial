@@ -1,12 +1,25 @@
 package com.uptc.frw.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "cliente")
 public class Cliente {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cedula")
     private long cedula;
+    @Column(name = "nombre")
     private String nombre;
+    @Column(name = "apellido")
     private String apellido;
+    @Column(name = "telefono")
     private String telefono;
+    @Column(name = "direccion")
     private String direccion;
+    @Column(name = "correo")
     private String correo;
+    @Column(name = "pts")
     private String pts;
 
     public Cliente() {

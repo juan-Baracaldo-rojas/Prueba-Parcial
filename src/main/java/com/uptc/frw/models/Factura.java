@@ -1,12 +1,22 @@
 package com.uptc.frw.models;
 
-import java.util.Date;
+import jakarta.persistence.*;
 
+import java.util.Date;
+@Entity
+@Table(name="factura")
 public class Factura {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "num_factura")
     private long num_factura;
+    @Column(name = "fecha_factura")
     private Date fecha_factura;
+    @Column(name = "total")
     private double total;
+    @Column(name = "cedula")
     private long cedula;
+    @Column(name = "iva")
     private double iva;
 
     public Factura() {

@@ -13,7 +13,7 @@ public class Principal {
         EntityManager en= PersistenceUtil.getEntityManager();
 
     }
-
+/*
     public static void example(){
        /* EntityManager en= PersistenceUtil.getEntityManager();
         Person persona=en.find(Person.class,1);
@@ -32,7 +32,7 @@ public class Principal {
         en.getTransaction().begin();
         en.persist(book);
         en.getTransaction().commit();
-        */
+
     }
 
     public static  void insertar_datos_detalle_bill(){
@@ -54,7 +54,6 @@ public class Principal {
         en.getTransaction().begin();
         en.getTransaction().commit();
     }
-{}
     public  static void Insertar_datos_bill(){
         EntityManager en= PersistenceUtil.getEntityManager();
         Bill bill= new Bill();
@@ -174,4 +173,5 @@ public class Principal {
         Edition edition = en.find(Edition.class,100);
         System.out.println(edition);
     }
+*/
 }
